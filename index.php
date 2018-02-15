@@ -1,7 +1,14 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: maggioli
- * Date: 15/02/2018
- * Time: 11:28
- */
+$servername = "localhost";
+$username = "username";
+$password = "password";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+echo "Connected successfully";
+?>
