@@ -4,14 +4,12 @@ $username="root";
 $password="";
 $dbname="Utenti";
 
-// Create connection
 $conn = new mysqli($servername);
-// Check connection
+
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// Create database
 $sql = "SELECT id, Nome, Cognome, Email FROM Credenziali";
 if ($conn->query($sql) === TRUE) {
     while($row=$result->fetch_assoc()){
@@ -24,5 +22,4 @@ if ($conn->query($sql) === TRUE) {
     echo "</tr>";
     }
 }
-
 $conn->close();
