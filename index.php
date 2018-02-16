@@ -41,7 +41,6 @@
             <th>Elimina</th>
         </tr>
         </thead>
-    </table>
 </div>
 </body>
 
@@ -70,5 +69,9 @@ $result=$conn->query($sql);
     echo "<td><button type=\"button\" class=\"btn btn-danger\">Delete</button></td>";
     echo "</tr>";
     }
+
+echo "</table>";
+echo"</div>";
+echo"</body>";
 
 $conn->close();
