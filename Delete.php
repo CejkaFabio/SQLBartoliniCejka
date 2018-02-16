@@ -10,9 +10,9 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
+$Id=$_GET['identificator'];
 
-
-$sql = "DELETE FROM registro WHERE Id=3";
+$sql = "DELETE FROM registro WHERE Id=$Id";
 
 if ($conn->query($sql) === TRUE) {
     echo "Record deleted successfully";
