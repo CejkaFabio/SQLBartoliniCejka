@@ -29,8 +29,9 @@
 <body>
 <h3 align="center">Tabella SQL Bartolini-Cejka</h3>
 <div class="container">
-    <button class="button">Aggiungi Record</button>
-    <table class="table table-hover" style="width:100%">
+    <form action='Aggiungi.php' method='get'><button class="button">Aggiungi Record</button></form>
+
+    <div class="table table-hover" style="width:100%">
         <thead>
         <tr>
             <th>ID</th>
@@ -65,8 +66,8 @@ $result=$conn->query($sql);
     echo "<td>".$row['Nome']."</td>";
     echo "<td>".$row['Cognome']."</td>";
     echo "<td>".$row['Email']."</td>";
-    echo "<td><button type=\"button\" class=\"btn btn-primary\">Update</button></td>";
-    echo "<td><button type=\"button\" class=\"btn btn-danger\">Delete</button></td>";
+    echo "<td><form action='Update.php' method='get'><button type=\"button\" class=\"btn btn-primary\">Update</button></td></form>";
+    echo "<td><form action='Delete.php' method='get'><button type=\"button\" class=\"btn btn-danger\">Delete</button></td></form>";
     echo "</tr>";
     }
 
