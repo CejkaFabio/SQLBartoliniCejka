@@ -27,6 +27,7 @@
 
 </head>
 <body>
+<table>
 <h3 align="center">Tabella SQL Bartolini-Cejka</h3>
 <div class="container">
     <form action='Aggiungi.php' method='get'><button class="button">Aggiungi Record</button></form>
