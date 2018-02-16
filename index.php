@@ -67,8 +67,8 @@ $result=$conn->query($sql);
     echo "<td>".$row['Nome']."</td>";
     echo "<td>".$row['Cognome']."</td>";
     echo "<td>".$row['Email']."</td>";
-    echo "<td><form action='Update.php' method='get'><button type=\"button\" class=\"btn btn-primary\">Update</button></td></form>";
-    echo "<td><form action='Delete.php' method='get'><button type=\"button\" class=\"btn btn-danger\">Delete</button></td></form>";
+    echo "<td><form action='Update.php' method='get'><button type=\"submit\" class=\"btn btn-primary\">Update</button></td></form>";
+    echo "<td><form action='Delete.php' method='get'><button type=\"submit\" class=\"btn btn-danger\">Delete</button></td></form>";
     echo "</tr>";
     }
 

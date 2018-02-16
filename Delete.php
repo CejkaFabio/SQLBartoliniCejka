@@ -12,7 +12,7 @@ if ($conn->connect_error) {
 }
 
 
-$sql = "DELETE FROM MyGuests WHERE id=3";
+$sql = "DELETE FROM registro WHERE Id=3";
 
 if ($conn->query($sql) === TRUE) {
     echo "Record deleted successfully";
