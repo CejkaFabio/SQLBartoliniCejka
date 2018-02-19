@@ -15,15 +15,15 @@
         <input type="hidden" name="identificator" value="<?php echo $_GET['identificator']; ?>">
         <div class="form-group">
             <label for="name">Nome:</label>
-            <input type="text" class="form-control" name="nome" id="name">
+            <input type="text" class="form-control" name="nome" id="name" required>
         </div>
         <div class="form-group">
             <label for="cognome">Cognome:</label>
-            <input type="text" class="form-control" name="cognome" id="surname">
+            <input type="text" class="form-control" name="cognome" id="surname" required>
         </div>
         <div class="form-group">
             <label for="email">Email:</label>
-            <input type="email" class="form-control" name="email" id="mail">
+            <input type="email" class="form-control" name="email" id="mail" required>
         </div>
         <div class="form-group">
             <label for="insert">INSERT:</label>

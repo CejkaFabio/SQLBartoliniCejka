@@ -15,7 +15,7 @@ $Id=$_GET['identificator'];
 $sql = "DELETE FROM registro WHERE Id=$Id";
 
 if ($conn->query($sql) === TRUE) {
-    echo "Record deleted successfully";
+    echo "Il Record è stato cancellato";
 } else {
     echo "Error deleting record: " . $conn->error;
 }

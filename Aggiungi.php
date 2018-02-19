@@ -13,18 +13,17 @@
     <div class="container col-xs-8 col-lg-3">
         <form method="post" action="">
             <label for="nm">Nome:</label>
-            <input type="text" class="form-control" name="nome" id="name">
+            <input type="text" class="form-control" name="nome" id="name" required>
             <label for="cnm">Cognome:</label>
-            <input type="text" class="form-control" name="cognome" id="cognome">
+            <input type="text" class="form-control" name="cognome" id="cognome" required>
             <label for="mail">Email:</label>
-            <input type="email" class="form-control" name="email" id="email">
+            <input type="email" class="form-control" name="email" id="email" required>
             <input type="submit" class="form-control" id="insert">
         </form>
         </div>
     </div>
 
 </body>
-
 <?php
 if(isset($_POST['nome'])&&(isset($_POST['cognome'])&&(isset($_POST['email'])))) {
     $servername = "localhost";
@@ -33,23 +32,39 @@ if(isset($_POST['nome'])&&(isset($_POST['cognome'])&&(isset($_POST['email'])))) 
     $dbname = "sqlbartolinicejka";
 
     $conn = new mysqli($servername, $username, $password, $dbname);
-
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
     $nome = $_POST['nome'];
     $cognome = $_POST['cognome'];
     $email = $_POST['email'];
-    $sql = "INSERT INTO registro ( Nome, Cognome, Email)
+    if ($nome == $cognome)
+    {
+        echo("Attenzione: Il nome e il cognome non possono essere uguali");
+        //header('Location: http://   localhost:63342/SQLBartoliniCejka/Aggiungi.php?');
+    }
+    else
+        {
+        $punto = count(explode( '.', $email )) - 1;
+        if($punto != 1)
+        {
+            echo 'Indirizzo email corretto';
+        }
+        else
+        {
+        echo 'Indirizzo email errato';
+        }
+        $sql = "INSERT INTO registro ( Nome, Cognome, Email)
 VALUES ('$nome', '$cognome', '$email')";
 
-    if ($conn->query($sql) === TRUE) {
-        echo "New record created successfully";
-    } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+        if ($conn->query($sql) === TRUE) {
+            echo "New record created successfully";
+        } else {
+            echo "Error: " . $sql . "<br>" . $conn->error;
+        }
+        echo "</table>";
+        echo "</div>";
+        header('Location: http://localhost:63342/SQLBartoliniCejka/index.php?');
+        $conn->close();
     }
-    echo "</table>";
-    echo "</div>";
-header('Location: http://localhost:63342/SQLBartoliniCejka/index.php?');
-    $conn->close();
 }
