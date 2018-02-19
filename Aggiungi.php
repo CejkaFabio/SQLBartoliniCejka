@@ -8,25 +8,27 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-<form method="post" action="addRecord.php">
+<form method="post" action="">
     <br>
     <div class="container col-xs-8 col-lg-3">
         <div class="form-group">
             <label for="nm">Nome:</label>
-            <input type="text" class="form-control" name="nome" id="nm">
+            <input type="text" class="form-control" name="nome" id="name">
         </div>
         <div class="form-group">
             <label for="cnm">Cognome:</label>
-            <input type="text" class="form-control" name="cognome" id="cnm">
+            <input type="text" class="form-control" name="cognome" id="cognome">
         </div>
         <div class="form-group">
             <label for="mail">Email:</label>
-            <input type="email" class="form-control" name="email" id="mail">
+            <input type="email" class="form-control" name="email" id="email">
         </div>
         <div class="form-group">
             <input type="submit" class="form-control" id="insert">
         </div>
     </div>
+</form>
+</body>
 
 <?php
 $servername = "localhost";
@@ -39,9 +41,9 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-$nome=$_GET['nome'];
-$cognome=$_GET['cognome'];
-$email=$_GET['email'];
+$nome=$_POST['nome'];
+$cognome=$_POST['cognome'];
+$email=$_POST['email'];
 $sql = "INSERT INTO registro ( Nome, Cognome, Email)
 VALUES ($nome, $cognome, $email)";
 
@@ -52,5 +54,5 @@ if ($conn->query($sql) === TRUE) {
 }
 echo "</table>";
 echo"</div>";
-echo"</body>";
+//header('Location: http://localhost:63342/SQLBartoliniCejka/index.php?');
 $conn->close();
