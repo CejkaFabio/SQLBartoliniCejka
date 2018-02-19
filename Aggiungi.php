@@ -11,7 +11,7 @@ if ($conn->connect_error) {
 }
 
 $sql = "INSERT INTO registro ( Nome, Cognome, Email)
-VALUES ('John', 'Doe', 'john@example.com')";
+VALUES ('', '', '')";
 
 if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";
