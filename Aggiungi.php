@@ -38,14 +38,22 @@ if(isset($_POST['nome'])&&(isset($_POST['cognome'])&&(isset($_POST['email'])))) 
     $nome = $_POST['nome'];
     $cognome = $_POST['cognome'];
     $email = $_POST['email'];
-    if ($nome == $cognome)
-    {
-        echo("Attenzione: Il nome e il cognome non possono essere uguali");
-        //header('Location: http://   localhost:63342/SQLBartoliniCejka/Aggiungi.php?');
+
+    /*$sql = "SELECT * FROM $registro WHERE username = '".$nome."'";
+    $result = sqlbartolinicejka_query($sql);
+    $num_righe = sqlbartolinicejka_num_rows($result);
+    if ($num_righe<1){
+        echo "Il nome utente non esiste";
+    }else{
+        echo "Il nome utente esiste";
     }
-    else
-        {
-        $punto = count(explode( '.', $email )) - 1;
+
+    if ($result="0"){
+        echo "il nome utente non esiste";
+    }else{
+        echo "il nome utente esiste";
+    }*/
+    $punto = count(explode( '.', $email )) - 1;
         if($punto != 1)
         {
             echo 'Indirizzo email corretto';
@@ -66,5 +74,5 @@ VALUES ('$nome', '$cognome', '$email')";
         echo "</div>";
         header('Location: http://localhost:63342/SQLBartoliniCejka/index.php?');
         $conn->close();
-    }
+    //}
 }
