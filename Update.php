@@ -30,8 +30,6 @@
         </div>
     </div>
 </form>
-</body>
-</html>
 <?php
 $servername = "localhost";
 $username = "root";
@@ -64,7 +62,9 @@ if ($conn->query($sql) === TRUE) {
     echo "Error updating record: " . $conn->error;
 }
 
-
+echo "</table>";
+echo"</div>";
+echo"</body>";
 
 $conn->close();
 /*
