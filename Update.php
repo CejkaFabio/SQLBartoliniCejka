@@ -34,22 +34,23 @@
 </body>
 
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "sqlbartolinicejka";
+if(isset($_POST['nome'])&&(isset($_POST['cognome'])&&(isset($_POST['email'])))) {
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "sqlbartolinicejka";
 
 
-$conn = new mysqli($servername, $username, $password, $dbname);
+    $conn = new mysqli($servername, $username, $password, $dbname);
 
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
 
-$name=$_POST['nome'];
-$cognome=$_POST['cognome'];
-$email=$_POST['email'];
-$Id=$_POST['identificator'];
+    $name = $_POST['nome'];
+    $cognome = $_POST['cognome'];
+    $email = $_POST['email'];
+    $Id = $_POST['identificator'];
 
     $sql = "UPDATE registro SET Nome='$name', Cognome='$cognome', Email='$email' WHERE Id='$Id'";
 
@@ -57,18 +58,18 @@ $Id=$_POST['identificator'];
     } else {
         echo "Error updating record: " . $conn->error;
     }
-    $sql = "UPDATE registro SET Cognome=$cognome WHERE Id=$Id";
+    $sql = "UPDATE registro SET Cognome='$cognome' WHERE Id='$Id'";
 
     if ($conn->query($sql) === TRUE) {
     } else {
         echo "Error updating record: " . $conn->error;
     }
-    $sql = "UPDATE registro SET Email=$email WHERE Id=$Id";
+    $sql = "UPDATE registro SET Email='$email' WHERE Id='$Id'";
     if ($conn->query($sql) === TRUE) {
     } else {
         echo "Error updating record: " . $conn->error;
     }
 
-//header('Location: http://localhost:63342/SQLBartoliniCejka/index.php?');
-$conn->close();
-
+header('Location: http://localhost:63342/SQLBartoliniCejka/index.php?');
+    $conn->close();
+}
