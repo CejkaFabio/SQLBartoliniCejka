@@ -44,14 +44,12 @@
         </tr>
         </thead>
 </div>
-</body>
 
 <?php
 $servername = "localhost";
 $username="root";
 $password="";
 $dbname="sqlbartolinicejka";
-
 
 $conn = new mysqli($servername,$username,$password,$dbname);
 
