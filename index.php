@@ -74,11 +74,11 @@ echo"</div>";
 
 $conn->close();
 ?>
-<input type="search" id="mySearch" placeholder="Search for something..">
+    <br>
+    <br>
+<input type="search" id="mySearch" placeholder="Cerca...">
 
-    <p>Click the button to get the placeholder text of the search field.</p>
-
-    <button onclick="myFunction()">Try it</button>
+    <button onclick="myFunction()">Vai!</button>
 
     <p id="demo"></p>
 
