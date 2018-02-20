@@ -5,8 +5,8 @@ for(var i=0;i<elementi.length;i++)
 }
 for(var i=0;i<elementi.length;i++)
 {
-    if(elementi[i] == text.contains(parola);{
-   // if(parola==elementi[i].innerHTML) {
+    if(elementi[i].innerHTML.search(parola)!=-1)
+    {
         elementi[i].style.backgroundColor = "lightblue";
     }
 }
