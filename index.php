@@ -83,3 +83,4 @@ Cerca:   <input type="search" id="mySearch" placeholder="Cerca..." onkeyup="Cerc
 </div>
 </body>
 </html>
+<!-- Ciao-->
