@@ -38,21 +38,6 @@ if(isset($_POST['nome'])&&(isset($_POST['cognome'])&&(isset($_POST['email'])))) 
     $nome = $_POST['nome'];
     $cognome = $_POST['cognome'];
     $email = $_POST['email'];
-
-    /*$sql = "SELECT * FROM $registro WHERE username = '".$nome."'";
-    $result = sqlbartolinicejka_query($sql);
-    $num_righe = sqlbartolinicejka_num_rows($result);
-    if ($num_righe<1){
-        echo "Il nome utente non esiste";
-    }else{
-        echo "Il nome utente esiste";
-    }
-
-    if ($result="0"){
-        echo "il nome utente non esiste";
-    }else{
-        echo "il nome utente esiste";
-    }*/
     $punto = count(explode( '.', $email )) - 1;
         if($punto != 1)
         {
