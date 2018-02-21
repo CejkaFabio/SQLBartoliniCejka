@@ -57,7 +57,7 @@ VALUES ('$nome', '$cognome', '$email')";
         }
         echo "</table>";
         echo "</div>";
-        header('Location: http://localhost/SQLBartoliniCejka/index.php?');
+        header('Location: http://192.168.245.10/SQLBartoliniCejka/index.php?');
         $conn->close();
     //}
 }

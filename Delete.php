@@ -19,5 +19,5 @@ if ($conn->query($sql) === TRUE) {
 } else {
     echo "Error deleting record: " . $conn->error;
 }
-header('Location: http://localhost:63342/SQLBartoliniCejka/index.php?');
+header('Location: http://192.168.245.10/SQLBartoliniCejka/index.php?');
 $conn->close();

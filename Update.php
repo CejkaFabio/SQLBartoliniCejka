@@ -70,6 +70,6 @@ if(isset($_POST['nome'])&&(isset($_POST['cognome'])&&(isset($_POST['email'])))) 
         echo "Error updating record: " . $conn->error;
     }
 
-header('Location: http://localhost:63342/SQLBartoliniCejka/index.php?');
+header('Location: http://192.168.245.10/SQLBartoliniCejka/index.php?');
     $conn->close();
 }
