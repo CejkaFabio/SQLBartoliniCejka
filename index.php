@@ -8,6 +8,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="script/Cerca.js"></script>
+    <script type="text/javascript" scr="script/Aiuto.js"></script>
     <style>
         table, th, td {
             border: 1px solid black;
@@ -77,9 +78,8 @@ $conn->close();
 ?>
     <br>
     <br>
-<input type="search" id="mySearch" placeholder="Cerca...">
-<button onclick="Cerca(document.getElementById('mySearch').value,document.getElementsByTagName('td'));">Vai!</button>
-
+Cerca:   <input type="search" id="mySearch" placeholder="Cerca..." onkeyup="Cerca(document.getElementById('mySearch').value,document.getElementsByTagName('td'));">
+<p>Suggestion: <span id="txtHint"></span></p>
 </div>
 </body>
 </html>
