@@ -1,7 +1,7 @@
 function showResult(str) {
     if (str.length==0) {
-        document.getElementById("livesearch").innerHTML="";
-        document.getElementById("livesearch").style.border="0px";
+        document.getElementById("txtHint").innerHTML="";
+        document.getElementById("txtHint").style.border="0px";
         return;
     }
     if (window.XMLHttpRequest) {
