@@ -32,17 +32,17 @@
 <h2 align="center">CRUD Bartolini Simone - Cejka Fabio Matthias</h2>
 <br>
 <div class="container">
-    <div class="col-xs-6" align="left">
-    <form action='Aggiungi.php' method='get'><button type="button" class="btn btn-success btn-lg">Aggiungi Record</button></form>
+    <div class="col-xs-8" align="left">
+    <form action='Aggiungi.php' method='get'><button type="submit" class="btn btn-success btn-lg">Aggiungi Record</button></form>
     </div>
-    <div class="col-xs-6" align="right">
-    Cerca:   <input type="search" id="mySearch" placeholder="Cerca..." onkeyup="Cerca(document.getElementById('mySearch').value,document.getElementsByTagName('td'));">
+    <div class="input-group col-xs-4">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span><input type="search" class="form-control" id="mySearch" placeholder="Cerca..." onkeyup="Cerca(document.getElementById('mySearch').value,document.getElementsByTagName('td'));">
     </div>
     <br>
     <br>
     <br>
-        <table class="table">
-        <thead class="thead-light">
+        <table class="table table-striped">
+        <thead>
         <tr>
             <th>ID</th>
             <th>Nome</th>

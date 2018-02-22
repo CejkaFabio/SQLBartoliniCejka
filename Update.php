@@ -11,24 +11,40 @@
 <body>
 <form method="post" action="">
     <br>
-    <div class="container col-xs-8 col-lg-3">
+    <div class="container col-xs-12" align="center">
+        <center>
+            <h2>UPDATE THE CONTROLS</h2>
+            <br>
         <input type="hidden" name="identificator" value="<?php echo $_GET['identificator']; ?>">
+        <div class="container col-xs-4" align="center">
         <div class="form-group">
             <label for="name">Nome:</label>
             <input type="text" class="form-control" name="nome" id="name" required>
         </div>
+        </div>
+        <div class="container col-xs-4" align="center">
         <div class="form-group">
             <label for="cognome">Cognome:</label>
             <input type="text" class="form-control" name="cognome" id="surname" required>
         </div>
+        </div>
+        <div class="container col-xs-4" align="center">
         <div class="form-group">
             <label for="email">Email:</label>
             <input type="email" class="form-control" name="email" id="mail" required>
         </div>
-        <div class="form-group">
-            <label for="insert">INSERT:</label>
-            <input type="submit" class="form-control" name='invia' id="insert">
         </div>
+        <div class="container col-xs-6" align="center">
+        <div class="form-group">
+            <input type="submit" class="btn btn-success btn-block" name='Invia' id="insert">
+        </div>
+        </div>
+        <div class="container col-xs-6" align="center">
+        <div class="form-group">
+            <input type="reset" class="btn btn-danger btn-block" name='Annulla' id="insert">
+        </div>
+        </div>
+        </center>
     </div>
 </form>
 </body>
