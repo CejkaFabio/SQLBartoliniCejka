@@ -61,7 +61,7 @@ VALUES ('$nome', '$cognome', '$email')";
         $conn->close();
     //}
 }
-/*
+/*cipollamidolla
     <div class="container col-xs-12" align="center">
             <h2>UPDATE THE CONTROLS</h2>
             <br>
