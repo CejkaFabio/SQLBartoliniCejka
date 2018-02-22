@@ -10,8 +10,9 @@
 <body>
 
     <br>
-    <div class="container col-xs-8 col-lg-3">
         <form method="post" action="">
+            <div class="container col-xs-12 align="center">
+            <h2>ADD THE CONTROLS</h2>
             <label for="nm">Nome:</label>
             <input type="text" class="form-control" name="nome" id="name" required>
             <label for="cnm">Cognome:</label>
@@ -62,8 +63,8 @@ VALUES ('$nome', '$cognome', '$email')";
     //}
 }
 /*
-    <div class="container col-xs-12" align="center">
-            <h2>UPDATE THE CONTROLS</h2>
+    <div class="container col-xs-" >
+
             <br>
         <input type="hidden" name="identificator" value="<?php echo $_GET['identificator']; ?>">
         <div class="container col-xs-4" align="center">
