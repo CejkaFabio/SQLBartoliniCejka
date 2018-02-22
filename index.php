@@ -29,19 +29,27 @@
 
 </head>
 <body>
-<table>
-<h3 align="center">Tabella SQL Bartolini-Cejka</h3>
+<h2 align="center">CRUD Bartolini Simone - Cejka Fabio Matthias</h2>
+<br>
 <div class="container">
-    <form action='Aggiungi.php' method='get'><button class="button">Aggiungi Record</button></form>
-    <div class="table table-hover" style="width:100%">
-        <thead>
+    <div class="col-xs-6" align="left">
+    <form action='Aggiungi.php' method='get'><button type="button" class="btn btn-success btn-lg">Aggiungi Record</button></form>
+    </div>
+    <div class="col-xs-6" align="right">
+    Cerca:   <input type="search" id="mySearch" placeholder="Cerca..." onkeyup="Cerca(document.getElementById('mySearch').value,document.getElementsByTagName('td'));">
+    </div>
+    <br>
+    <br>
+    <br>
+        <table class="table">
+        <thead class="thead-light">
         <tr>
             <th>ID</th>
             <th>Nome</th>
             <th>Cognome</th>
             <th>Email</th>
-            <th>Modifica</th>
-            <th>Elimina</th>
+            <th>Update</th>
+            <th>Delete</th>
         </tr>
         </thead>
 </div>
@@ -67,8 +75,8 @@ $result=$conn->query($sql);
     echo "<td>".$row['Cognome']."</td>";
     echo "<td>".$row['Email']."</td>";
     $riga = $row['Id'];
-    echo "<td><form action='Update.php' method='get'><button type=\"submit\" class=\"btn btn-primary\"><input type='hidden' name='identificator' value='$riga'>Update</button></form></td>";
-    echo "<td><form action='Delete.php' method='get'><button type=\"submit\" class=\"btn btn-danger\"><input type='hidden' name='identificator' value='$riga'>Delete</button></form></td>";
+    echo "<td><form action='Update.php' method='get'><button type=\"submit\" class=\"btn btn-primary btn-block\"><input type='hidden' name='identificator' value='$riga'>Update</button></form></td>";
+    echo "<td><form action='Delete.php' method='get'><button type=\"submit\" class=\"btn btn-danger btn-block\"><input type='hidden' name='identificator' value='$riga'>Delete</button></form></td>";
     echo "</tr>";
     }
 echo "</table>";
@@ -78,8 +86,7 @@ $conn->close();
 ?>
     <br>
     <br>
-Cerca:   <input type="search" id="mySearch" placeholder="Cerca..." onkeyup="Cerca(document.getElementById('mySearch').value,document.getElementsByTagName('td'));">
-<p>Suggestion: <span id="txtHint"></span></p>
+
 </div>
 </body>
 </html>
