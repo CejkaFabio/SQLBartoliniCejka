@@ -76,7 +76,7 @@ $result=$conn->query($sql);
     echo "<td>".$row['Cognome']."</td>";
     echo "<td>".$row['Email']."</td>";
     $riga = $row['Id'];
-    echo "<td><form action='Caricamento.js' method='get'><button type=\"submit\" class=\"btn btn-primary btn-block\"><input type='hidden' name='identificator' value='$riga'>Update</button></form></td>";
+    echo "<td><form action='Update.php' method='get'><button type=\"submit\" class=\"btn btn-primary btn-block\"><input type='hidden' name='identificator' value='$riga'>Update</button></form></td>";
     echo "<td><form action='Delete.php' method='get'><button type=\"submit\" class=\"btn btn-danger btn-block\"><input type='hidden' name='identificator' value='$riga'>Delete</button></form></td>";
     echo "</tr>";
     }
