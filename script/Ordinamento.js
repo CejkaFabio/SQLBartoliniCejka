@@ -1,17 +1,20 @@
-function Ordinamento(parola,elementi)
+function Ordinamento(value)
 {
-    alert('ciao');
-var vettore=new Array();
-var vettore2=new Array();
-for(var i=0;i<elementi.length;i++)
-{
-    vettore[i]=elementi[i].innerHTML+i.toString();
-    vettore2[i]=parola[i+1].innerHTML;
-}
-vettore.sort();
-    alert('2ciao');
-for(var i=0;i<vettore.length;i++) {
-parola[i+1].innerHTML=vettore2[vettore[i][vettore[i].length-1]];
 
-}
+    var appoggio = new Array();
+    var appoggiotabella=new Array();
+    var rows=document.getElementsByName(value);
+    var tabella=document.getElementsByTagName('tr');
+    for(var i=0;i<rows.length;i++)
+    {
+       appoggio[i]=rows[i].innerHTML.toUpperCase()+ i.toString();
+       appoggiotabella[i]=tabella[i+1].innerHTML;
+    }
+    appoggio.sort();
+    for(var i=0;i<appoggio.length;i++)
+    {
+        alert('Va?');
+        tabella[i+1].innerHTML=appoggiotabella[appoggio[i][appoggio[i].length-1]];
+    }
+
 }

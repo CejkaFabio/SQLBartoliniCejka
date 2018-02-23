@@ -46,9 +46,9 @@
         <thead>
         <tr>
             <th>ID</th>
-            <th><button id="nome" onclick="Ordinamento(document.getElementById('nome').value,document.getElementsByTagName('td'))">Nome</button></th>
-            <th><button id="cognome" onclick="Ordinamento(document.getElementById('cognome').value,document.getElementsByTagName('td'))">Cognome</button></th>
-            <th><button id="email" onclick="Ordinamento(document.getElementById('email').value,document.getElementsByTagName('td'))">Email</button></th>
+            <th><button onclick="Ordinamento('nome');">Nome</button></th>
+            <th><button onclick="Ordinamento('cognome');">Cognome</button></th>
+            <th><button onclick="Ordinamento('email');">Email</button></th>
             <th>Update</th>
             <th>Delete</th>
         </tr>
@@ -72,9 +72,9 @@ $result=$conn->query($sql);
     while($row=$result->fetch_assoc()){
     echo "<tr>";
     echo "<td>".$row['Id']."</td>";
-    echo "<td>".$row['Nome']."</td>";
-    echo "<td>".$row['Cognome']."</td>";
-    echo "<td>".$row['Email']."</td>";
+    echo "<td name='nome'>".$row['Nome']."</td>";
+    echo "<td name='cognome'>".$row['Cognome']."</td>";
+    echo "<td name='email'>".$row['Email']."</td>";
     $riga = $row['Id'];
     echo "<td><form action='Update.php' method='get'><button type=\"submit\" class=\"btn btn-primary btn-block\"><input type='hidden' name='identificator' value='$riga'>Update</button></form></td>";
     echo "<td><form action='Delete.php' method='get'><button type=\"submit\" class=\"btn btn-danger btn-block\"><input type='hidden' name='identificator' value='$riga'>Delete</button></form></td>";
