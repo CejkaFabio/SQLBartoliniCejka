@@ -13,7 +13,6 @@ function Ordinamento(value)
     appoggio.sort();
     for(var i=0;i<appoggio.length;i++)
     {
-        alert('Va?');
         tabella[i+1].innerHTML=appoggiotabella[appoggio[i][appoggio[i].length-1]];
     }
 
