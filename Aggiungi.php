@@ -20,6 +20,7 @@
             <label for="mail">Email:</label>
             <input type="email" class="form-control" name="email" id="email" required>
             <input type="submit" class="form-control" id="insert">
+            <input type="reset" class="form-control" id="insert">
         </form>
         </div>
     </div>
