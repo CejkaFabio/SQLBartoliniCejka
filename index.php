@@ -8,6 +8,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="script/Cerca.js"></script>
+    <script type="text/javascript" src="script/Caricamento.js"></script>
      <style>
         table, th, td {
             border: 1px solid black;
@@ -74,7 +75,7 @@ $result=$conn->query($sql);
     echo "<td>".$row['Cognome']."</td>";
     echo "<td>".$row['Email']."</td>";
     $riga = $row['Id'];
-    echo "<td><form action='Update.php' method='get'><button type=\"submit\" class=\"btn btn-primary btn-block\"><input type='hidden' name='identificator' value='$riga'>Update</button></form></td>";
+    echo "<td><form method='get'><button type=\"submit\" class=\"btn btn-primary btn-block\"><input onclick='Caricamento.js' name='identificator' value='$riga'>Update</button></form></td>";
     echo "<td><form action='Delete.php' method='get'><button type=\"submit\" class=\"btn btn-danger btn-block\"><input type='hidden' name='identificator' value='$riga'>Delete</button></form></td>";
     echo "</tr>";
     }
