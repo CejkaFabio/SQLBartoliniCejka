@@ -45,7 +45,7 @@
         </div>
         <div class="container col-xs-4" align="center">
             <div class="form-group">
-                <input type="indietro" class="btn btn-primary btn-block" name='Indietro' value="Indietro" id="insert">
+                <a href="http://192.168.245.10/SQLBartoliniCejka/index.php?"><input type="indietro" class="btn btn-primary btn-block" name='Indietro' value="Indietro" id="insert"></a>
             </div>
         </div>
     </div>
