@@ -45,7 +45,7 @@
         <thead>
         <tr>
             <th>ID</th>
-            <th><button>Nome</button></th>
+            <th><button id="name" onclick="Ordinamento(document.getElementById('name').value,document.getElementsByTagName('td'))">">Nome</button></th>
             <th><button>Cognome</button></th>
             <th><button>Email</button></th>
             <th>Update</th>
