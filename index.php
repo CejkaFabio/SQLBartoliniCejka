@@ -45,9 +45,9 @@
         <thead>
         <tr>
             <th>ID</th>
-            <th><button id="name" onclick="Ordinamento(document.getElementById('name').value,document.getElementsByTagName('td'))">">Nome</button></th>
-            <th><button>Cognome</button></th>
-            <th><button>Email</button></th>
+            <th><button id="nome" onclick="Ordinamento(document.getElementById('name').value,document.getElementsByTagName('td'))">Nome</button></th>
+            <th><button id="cognome" onclick="Ordinamento(document.getElementById('cognome').value,document.getElementsByTagName('td'))">Cognome</button></th>
+            <th><button id="email" onclick="Ordinamento(document.getElementById('email').value,document.getElementsByTagName('td'))">Email</button></th>
             <th>Update</th>
             <th>Delete</th>
         </tr>
