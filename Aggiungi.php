@@ -13,14 +13,40 @@
         <form method="post" action="">
             <div class="container col-xs-12 align="center">
             <h2>ADD THE CONTROLS</h2>
-            <label for="nm">Nome:</label>
-            <input type="text" class="form-control" name="nome" id="name" required>
-            <label for="cnm">Cognome:</label>
-            <input type="text" class="form-control" name="cognome" id="cognome" required>
-            <label for="mail">Email:</label>
-            <input type="email" class="form-control" name="email" id="email" required>
-            <input type="submit" class="form-control" id="insert">
-            <input type="reset" class="form-control" id="insert">
+            <div class="container col-xs-4" align="center">
+                <div class="form-group text-center">
+                    <label for="name">Nome:</label>
+                    <input type="text" class="form-control" name="nome" id="name" required>
+                </div>
+            </div>
+            <div class="container col-xs-4" align="center">
+                <div class="form-group text-center">
+                    <label for="cognome">Cognome:</label>
+                    <input type="text" class="form-control" name="cognome" id="cognome" required>
+                </div>
+            </div>
+            <div class="container col-xs-4" align="center">
+                <div class="form-group text-center">
+                    <label for="mail">Email:</label>
+                    <input type="email" class="form-control" name="email" id="email" required>
+                </div>
+            </div>
+            <div class="container col-xs-4" align="center">
+            <div class="form-group">
+            <input type="submit" class="btn btn-success btn-block" id="insert">
+            </div>
+            </div>
+            <div class="container col-xs-4" align="center">
+            <div class="form-group">
+            <input type="reset" class="btn btn-danger btn-block" id="insert">
+            </div>
+            </div>
+            <div>
+            <div class="container col-xs-4" align="center">
+            <div class="form-group">
+                <a href="http://192.168.245.10/SQLBartoliniCejka/index.php?"><input type="indietro" class="btn btn-primary btn-block" name='Indietro' value="Indietro" id="insert"></a>
+            </div>
+            </div>
         </form>
         </div>
     </div>
