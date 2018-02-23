@@ -33,15 +33,20 @@
             <input type="email" class="form-control" name="email" id="mail" required>
         </div>
         </div>
-        <div class="container col-xs-6" align="center">
+        <div class="container col-xs-4" align="center">
         <div class="form-group">
             <input type="submit" class="btn btn-success btn-block" name='Invia' id="insert">
         </div>
         </div>
-        <div class="container col-xs-6" align="center">
+        <div class="container col-xs-4" align="center">
         <div class="form-group">
             <input type="reset" class="btn btn-danger btn-block" name='Annulla' value="Annulla" id="insert">
         </div>
+        </div>
+        <div class="container col-xs-4" align="center">
+            <div class="form-group">
+                <input type="indietro" class="btn btn-primary btn-block" name='Indietro' value="Indietro" id="insert">
+            </div>
         </div>
     </div>
 </form>
